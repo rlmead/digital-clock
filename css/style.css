@@ -1,0 +1,25 @@
+body {
+    margin: auto;
+    text-align: center;
+    font-family: 'Source Code Pro', sans-serif;
+}
+
+div {
+    font-size: 3em;
+    margin: auto;
+}
+
+p {
+    font-size: 2em;
+}
+
+.happy {
+    background-color: #FED426;
+    font-family: 'Happy Monkey', sans-serif;
+}
+
+.gloomy {
+    background-color: #222222;
+    font-family: 'Special Elite', serif;
+    color: #CCCCCC
+}
