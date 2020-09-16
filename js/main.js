@@ -44,6 +44,11 @@ function change_mood(weather) {
         message.setAttribute('style', 'font-family: \'Happy Monkey\', sans-serif');
         message.textContent = 'it\'s a great time to do something fun!';
         button.textContent = 'it\'s gloomy out';
+        button.onclick = function () {
+            weather = 'gloomy';
+            clearInterval(running_clock);
+            change_mood(weather);
+        }
         // show the time immediately upon loading
         show_accurate_time();
         // change the time every second
@@ -56,6 +61,11 @@ function change_mood(weather) {
         message.setAttribute('style', 'font-family: \'Special Elite\', sans-serif');
         message.textContent = 'i don\'t wanna tell you what time it is';
         button.textContent = 'it\'s sunny out';
+        button.onclick = function () {
+            weather = 'sunny';
+            clearInterval(running_clock);
+            change_mood(weather);
+        }
         // show the time immediately upon loading
         show_inaccurate_time();
         // change the time every second
@@ -64,13 +74,3 @@ function change_mood(weather) {
 }
 
 change_mood(weather);
-
-button.onclick = function () {
-    if (weather === 'sunny') {
-        weather = 'gloomy';
-    } else {
-        weather = 'sunny';
-    }
-    clearInterval(running_clock);
-    change_mood(weather);
-};
