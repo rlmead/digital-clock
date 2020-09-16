@@ -2,7 +2,8 @@
 const weather = 'sunny';
 const body = document.querySelector('body');
 const clock = document.querySelector('div');
-const message = document.querySelector('h2')
+const message1 = document.querySelector('h1')
+const message2 = document.querySelector('h2')
 
 // create zero-padding function to make the randomized clock look more cohesive
 function zero_pad(input_string, desired_length) {
@@ -28,13 +29,19 @@ function show_inaccurate_time() {
 if (weather === 'sunny') {
     body.setAttribute('style', 'background-color: #87CEEB');
     clock.setAttribute('class', 'happy');
-    message.textContent = 'HEY YOU, it\'s a great time to do something fun ᕕ( ᐛ )ᕗ';
+    message1.setAttribute('style', 'font-family: \'Happy Monkey\', sans-serif');
+    message1.textContent = 'HEY YOU ᕕ( ᐛ )ᕗ';
+    message2.setAttribute('style', 'font-family: \'Happy Monkey\', sans-serif');
+    message2.textContent = 'it\'s a great time to do something fun';
     show_accurate_time();
     setInterval(function () { show_accurate_time() }, 1000);
 } else {
     body.setAttribute('style', 'background-color: #7A7A7A');
     clock.setAttribute('class', 'gloomy');
-    message.textContent = 'i don\'t wanna tell you what time it is ಠ╭╮ಠ';
+    message1.setAttribute('style', 'font-family: \'Special Elite\', sans-serif');
+    message1.textContent = 'meh ಠ╭╮ಠ';
+    message2.setAttribute('style', 'font-family: \'Special Elite\', sans-serif');
+    message2.textContent = 'i don\'t wanna tell you what time it is';
     show_inaccurate_time();
     setInterval(function () { show_inaccurate_time() }, 1000);
 }
