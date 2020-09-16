@@ -58,10 +58,12 @@ if (current_weather === sunny) {
     // does start_time need to be parsed?
     clock.textContent = start_time;
     body.setAttribute('class','happy')
+    // make clock count up in the usual way using setInterval
 } else
     message.textContent = 'I don't wanna tell you what time it is ಠ╭╮ಠ';
     let start_time = something random!!! (set max/min?);
     clock.textContent = start_time;
     body.setAttribute('class','gloomy')
+    // make clock behave weirdly using setInterval
 }
 ```
