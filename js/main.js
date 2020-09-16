@@ -12,7 +12,10 @@ function zero_pad(input_string, desired_length) {
 }
 
 if (weather === 'sunny') {
-    setInterval(function () { clock.textContent = Date().split(' ')[4]; }, 1000);
+    setInterval(function() {
+        let [hours, minutes, seconds] = (new Date()).toLocaleTimeString().slice(0,8).split(':');
+        clock.textContent = hours + ':' + minutes + ':' + seconds;
+    }, 1000)
 } else {
     setInterval(function () {
         let hours = zero_pad((Math.floor(Math.random() * 12) + 1).toString(),2);
