@@ -18,7 +18,8 @@ function zero_pad(input_string, desired_length) {
 // define function to show accurate time
 function show_accurate_time() {
     let [hours, minutes, seconds] = (new Date()).toLocaleTimeString().slice(0, 8).split(':');
-    clock.textContent = zero_pad(hours, 2) + ':' + minutes + ':' + seconds;
+    let period = (new Date()).toLocaleTimeString().slice(8,10);
+    clock.textContent = zero_pad(hours, 2) + ':' + minutes + ':' + seconds + ' ' + period;
 }
 
 // define function to show inaccurate time
@@ -26,7 +27,9 @@ function show_inaccurate_time() {
     let hours = zero_pad((Math.floor(Math.random() * 12) + 1).toString(), 2);
     let minutes = zero_pad(Math.floor(Math.random() * 60).toString(), 2);
     let seconds = zero_pad(Math.floor(Math.random() * 60).toString(), 2);
-    clock.textContent = hours + ':' + minutes + ':' + seconds;
+    let periods = ['AM', 'PM'];
+    let period = periods[Math.round(Math.random())]
+    clock.textContent = hours + ':' + minutes + ':' + seconds + ' ' + period;
 }
 
 let running_clock;
