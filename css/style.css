@@ -1,16 +1,18 @@
 body {
     margin: auto;
     text-align: center;
-    font-family: 'Source Code Pro', sans-serif;
-}
-
-div {
-    font-size: 3em;
-    margin: auto;
+    font-family: 'Roboto Mono', sans-serif;
 }
 
 p {
     font-size: 2em;
+}
+
+#clock {
+    font-size: 4em;
+    margin: auto;
+    display: inline-block;
+    padding: 8px;
 }
 
 .happy {
